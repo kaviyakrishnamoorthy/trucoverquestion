@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- page title -->
+    <title>TRAILER</title>
+    <!-- Style imports for Material Design Lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- This code loads the iFrame Player API code asynchronously.-->
+    <script src = "https://www.youtube.com/iframe_api"></script>
+    <!-- This is the source of the Javscript for the demo -->
+    <script src="demo.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">TRAILER</span>
+            <!-- Add spacer, to align navigation to the right -->
+            
+          </div>
+        </header>
+      <main class="mdl-layout__content">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--5-col">
+            <!-- The iframe video player will replace this <div> tag. -->
+            <div id="player"></div>
+          </div>
+          <div class="mdl-cell mdl-cell--7-col">
+            <!-- This table contains editable video on the video in the iframe -->
+            <table class="mdl-data-table">
+              <tr>
+                <td  class="mdl-data-table__cell--non-numeric">YoutubeID</td>
+                <td id="video_id"></td>
+                <td class="mdl-data-table__cell--non-numeric">
+                  <input id="video_idOption" type="text">
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onClick="loadNewVideo()">Load</button>
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onClick="cueNewVideo()">Cue</button>
+                </td>
+              </tr><tr>
+                <td  class="mdl-data-table__cell--non-numeric">Status</td>
+                <td id="status"></td>
+                <td class="mdl-data-table__cell--non-numeric">
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onClick="playVideo()">Play</button>
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onClick="pauseVideo()">Pause</button>
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onClick="stopVideo()">Stop</button>
+                </td>
+                </tr>
+            </table>
+            </div>
+        </div>
+        </div>
+      </main>
+    </div>
+    </body>
+</html>
+<!--    
+
+
+this is used to connect python and html file and retrieve information
+
+    <script>
+        function goPython(){
+            $.ajax({
+              url: "n1.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
+-->
+  
